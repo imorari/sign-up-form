@@ -20,44 +20,50 @@
     <div class="right-side">
 
         <form >
+            <div class="form-title">
             <p>Let's do this!</p>
+            </div>
         <div class="inputFields">
 
         <div class="input firstNameContainer">
-            <label for="first">FIRST NAME</label>
-            <input type="text" name="first_name" id="first" title="FIRST NAME">
+            <label for="first">*FIRST NAME</label>
+            <input placeholder="" type="text" name="first_name" id="first" title="FIRST NAME" maxlength="35" required pattern="[A-Za-z]+">
         </div>
 
         <div class=" input lastNameContainer">
-            <label for="last">LAST NAME</label>
-            <input type="text" name="last_name" id="last" title="LAST NAME">
+            <label for="last" >*LAST NAME</label>
+            <input placeholder="" type="text" name="last_name" id="last" title="LAST NAME"  maxlength="35" required pattern="[A-Za-z]+">
         </div>
 
         <div class=" input emailContainer">
-            <label for="email">E-MAIL</label>
-            <input type="email" name="email" id="email" title="E-MAIL">
+            <label for="email">*E-MAIL</label>
+            <input placeholder="email@example.com" type="email" name="email" id="email" title="E-MAIL"  maxlength="35" required>
         </div>
 
         <div class="input phoneNumberContainer">
             <label for="phone-number">PHONE NUMBER</label>
-            <input type="number">
+            <input type="tel"  id="phone-number" maxlength="12" pattern="^\d{3}-\d{3}-\d{4}$|^\d{10}$" placeholder="xxx-xxx-xxxx OR xxxxxxxxxx" >
         </div>
 
         <div class="input passwordContainer">
-            <label for="password">PASSWORD</label>
-            <input type="password" name="password" id="password" title="PASSWORD">        
+            <label for="password">*PASSWORD</label>
+            <input placeholder="" type="password" name="password" id="password" title="PASSWORD"  maxlength="35" required>        
         </div>
 
         <div class="input passwordConfirmContainer">
-            <label for="password_confirm">CONFIRM PASSWORD</label>
-            <input type="password" name="password_confirm" id="password_confirm" title="CONFIRM YOUR PASSWORD">
+            <label for="password_confirm">*CONFIRM PASSWORD</label>
+            <input placeholder="" type="password" name="password_confirm" id="password_confirm" title="CONFIRM YOUR PASSWORD"  maxlength="35" required>
         </div>
        
         </div>
         
-        <button type="submit">Create Account</button>
+        <div>
+            <button type="submit">Create Account</button>
+        </div>
         </form> 
-     
+        <div class="signIn">
+        <p>Already have an account?<a href="google.com">Sign In</a></p>
+        </div> 
     </div>
 </body>
 </html>

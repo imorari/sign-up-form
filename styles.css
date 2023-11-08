@@ -27,18 +27,14 @@ button {
   margin: 0;
   box-sizing: border-box;
 }
-.left-side{
-    position: relative;
-    background-image: url(images/background.jpeg);
-    
-}
+
 .quote{
     position: relative;
-    top: 25%;
+    top: 15%;
     width: 100%;
     padding: 5px 0 0 0;
     height: auto;
-    background-color: beige;
+    background-color: rgb(0, 0, 0, 0.4);
     display: flex;
     gap: 10px;
 }
@@ -48,10 +44,10 @@ button {
     }
     
     .left-side{
-        width: 40%;
+        width: 45%;
     }
     .right-side{
-        width: 60%;
+        width: 55%;
     }
 }
 @media screen and (max-width: 500px){
@@ -66,24 +62,39 @@ button {
     }
 
 }
+.left-side{
+    
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url(images/name.png);
+    background-size: max(100%, 500px) 100vh;
+    
+}
 .right-side{
-    display: flex;
+    box-shadow: 0 0 15px 0.5px gray ;
+    display: flex;  
+    background: linear-gradient(to bottom,#97d3eb,  #c4e6b6 ) ;
     justify-content: center;
-    align-items: center;
-    background-color: lightgreen;
+    flex-direction: column;
 }
 form{
-    width: 100%;
-    background-color: white;
+    height: fit-content;
+    background: rgba(126, 118, 86, 0.5);
     box-shadow: 0 0 10px 2px gray ;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 30px;
+    padding-bottom: 16px;
  
 }
 .inputFields{
-    padding: 16px 0 16px;
+    padding-bottom: 16px;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
     gap:15px 60px;
     
 }
@@ -92,16 +103,69 @@ form{
 {
     display: flex;
     flex-direction: column;
-    background-color: red;
 }
 
 .input{
-    width: clamp(200px ,calc(50% - 75px), 400px);
+    width: clamp(280px ,calc(50% - 40px), 400px);
 } 
+input{
+    padding: 5px 0 5px 5px;
+    border-radius:10px;
+    border: 0;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+input:focus{
+    outline: none;
+    border: 2px solid;
+    border-color: blue;
+}
+input:invalid:not(:placeholder-shown){
+    border: 2px solid;
+    border-color: red;
+}
+input:invalid + .error{
+    display: block;
+}
+input:valid:not(:placeholder-shown){
+    border: 2px solid;
+    border-color: green;
+}
+
+
 img{
     width: clamp(100px,10vw,20vw);
     height: clamp(100px,10vh,20vw);
 }
 label{
     font-size: x-small;
+    color: white;
+}
+p{
+    font-size: x-large;
+    color: white;
+    margin: 10px;
+}
+button{
+    font-size: large;
+    color: white;
+    padding: 6px 20px;
+    background-color: #596D48;
+    border-radius: 5px;
+    border: 0;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+button:hover{
+    background-color: rgb(44, 146, 44);
+    cursor: pointer;
+}
+
+.signIn p{
+    color: black;
+    font-size: medium;
+    padding:  0 0 0 20px;
+}
+a{
+ text-decoration: none;
+ padding-left: 10px;
+ color: #596D48;
 }
