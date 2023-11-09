@@ -6,8 +6,6 @@ html,body{
 
 }
 body{
-    padding: 0;
-    margin: 0;
     display: flex;
     flex-wrap: wrap;    
 }
@@ -30,15 +28,19 @@ button {
 
 .quote{
     position: relative;
-    top: 15%;
+    top: 20%;
     width: 100%;
     padding: 5px 0 0 0;
-    height: auto;
+    max-height: fit-content;
+    min-height: 100px;
     background-color: rgb(0, 0, 0, 0.4);
+    font-size: 1.5rem;
+    color: aquamarine;
     display: flex;
+    align-items: center;
     gap: 10px;
 }
-@media screen and (min-width: 501px){
+@media screen and (min-width: 601px){
     .left-side, .right-side{
         height: 100vh;     
     }
@@ -50,32 +52,36 @@ button {
         width: 55%;
     }
 }
-@media screen and (max-width: 500px){
+@media screen and (max-width: 600px){
     .left-side{
         width: 100%;
-        height: 100vh;
+        height: fit-content;
     }
     .right-side{
         width: 100%;
-        height: 100vh;
-    
+        height: fit-content;
+    }
+    html{
+        font-size: 10px;
     }
 
 }
 .left-side{
-    
     background-position: center center;
     background-repeat: no-repeat;
     background-image: url(images/name.png);
-    background-size: max(100%, 500px) 100vh;
+    background-size: clamp(700px,45vw,100vw) 100vh;
+    
+    
     
 }
 .right-side{
     box-shadow: 0 0 15px 0.5px gray ;
     display: flex;  
     background: linear-gradient(to bottom,#97d3eb,  #c4e6b6 ) ;
-    justify-content: center;
+    justify-content: flex-end;
     flex-direction: column;
+    justify-content: center;
 }
 form{
     height: fit-content;
@@ -87,6 +93,7 @@ form{
     justify-content: center;
     padding-left: 30px;
     padding-bottom: 16px;
+   
  
 }
 .inputFields{
@@ -133,8 +140,11 @@ input:valid:not(:placeholder-shown){
 
 
 img{
-    width: clamp(100px,10vw,20vw);
-    height: clamp(100px,10vh,20vw);
+    width: 90px;
+    height: 80px;
+    min-width: 90px;
+    min-height: 80px;
+    margin: 10px;
 }
 label{
     font-size: x-small;
