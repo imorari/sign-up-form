@@ -61,7 +61,7 @@ button {
     .right-side{
         width: 100%;
         min-height: fit-content;
-        height: 100vh;
+        height: fit-content;
     }
     html{
         font-size: 10px;
